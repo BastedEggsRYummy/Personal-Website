@@ -1,10 +1,10 @@
 import './home.css'
+import Name from './name';
 
 function Home() {
   return(
     <>
-    <div>text</div>
-    <div class="rhombus" />
+    <Name scale={1}/>
     </>
   );
 }
