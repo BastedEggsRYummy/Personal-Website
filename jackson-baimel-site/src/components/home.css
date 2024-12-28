@@ -1,0 +1,29 @@
+
+
+.rhombus {
+  position: relative;
+  left: 20px;
+  width: 90px;
+  height: 90px;
+  background-color: red;
+  
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+
+  animation: cap-swing infinite 2s linear;
+
+  /*animation: cap-swing infinite linear 1s infinite normal both;*/
+}
+
+/*@media (prefers-reduced-motion: no-preference) {
+  .rhombus {
+    animation: cap-swing infinite 2s linear;
+  }
+}*/
+
+
+@keyframes cap-swing {
+  0% { transform: rotate(45deg) }
+  50% { transform: rotate(55deg) }
+  100% { transform: rotate(45deg) }
+}
