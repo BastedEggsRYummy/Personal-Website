@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+@font-face {
+  font-family: YsabeauSC;
+  src: url('./assets/fonts/Ysabeau_SC/YsabeauSC-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: SourceSans3;
+  src: url('./assets/fonts/Source_Sans_3/SourceSans3-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: PlayfairDisplay;
+  src: url('./assets/fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf');
+}
