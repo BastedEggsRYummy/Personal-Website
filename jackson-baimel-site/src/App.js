@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Header />
       <Home />
-      <Name scale={2}/>
+      <Name scale={4}/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

@@ -1,14 +1,9 @@
 import './name.css';
+import Scalar from './scaler';
 
 function Name({ scale = 1 }) {
   return (
-    <div
-      id="scalable-container"
-      style={{
-        transform: `scale(${scale})`,
-        transformOrigin: 'center',
-      }}
-    >
+    <Scalar scale={scale}>
       <div id="name-component">
         <div id="j-letter">J</div>
         <div id="name-tagline-box">
@@ -16,7 +11,7 @@ function Name({ scale = 1 }) {
           <div id="tagline">CS + IT Extraordinaire</div>
         </div>
       </div>
-    </div>
+    </Scalar>
   );
 }
 
