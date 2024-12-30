@@ -1,7 +1,17 @@
-.App {
-  text-align: center;
+.App {  
+  background-color: blue;
+
+  display: flex;
+
+  flex-direction: column;
 }
 
+
+
+
+
+/*
+Old react stuff
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -14,7 +24,7 @@
 }
 
 .App-header {
-  /*background-color: #282c34;*/
+  /*background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -28,9 +38,9 @@
   color: #61dafb;
 }
 
-/*#name {
+#name {
   height: 500px;
-}*/
+}
 
 @keyframes App-logo-spin {
   from {
@@ -40,3 +50,4 @@
     transform: rotate(360deg);
   }
 }
+*/

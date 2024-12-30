@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 import Header from './components/header.js'
 import Home from './components/home.js'
@@ -6,11 +6,18 @@ import Name from './components/name.js'
 
 function App() {
   return (
-    <div className="App">
+    <div class="App">
       <Header />
       <Home />
-      <Name scale={4}/>
-      <header className="App-header">
+    </div>
+  );
+}
+
+export default App;
+
+
+/*
+<header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -24,8 +31,4 @@ function App() {
           Learn React
         </a>
       </header>
-    </div>
-  );
-}
-
-export default App;
+*/

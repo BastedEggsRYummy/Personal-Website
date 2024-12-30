@@ -1,5 +1,11 @@
 
 
+#home-container {
+  background-color: yellowgreen;
+  display: flex;
+  justify-content: center;
+}
+
 /*.rhombus {
   position: relative;
   left: 20px;

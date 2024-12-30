@@ -7,9 +7,11 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  /*width: fit-content;*/
+  width: fit-content;
+  height: fit-content;
+  font-size: 3rem;
 
-  /*background-color: green;*/
+  background-color: green;
 }
 
 #name {

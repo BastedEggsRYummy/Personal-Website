@@ -3,9 +3,9 @@ import Name from './name';
 
 function Home() {
   return(
-    <>
-    <Name scale={1}/>
-    </>
+    <div id='home-container'>
+      <Name />
+    </div>
   );
 }
 
