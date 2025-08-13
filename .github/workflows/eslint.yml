@@ -45,7 +45,7 @@ jobs:
         env:
           SARIF_ESLINT_IGNORE_SUPPRESSED: "true"
         run: |
-          npx eslint . \
+          npx eslint src/ \
             --config eslint.config.js \
             --ext .js,.jsx,.ts,.tsx \
             --format @microsoft/eslint-formatter-sarif \
@@ -54,14 +54,14 @@ jobs:
         # no continue-on-error here so the job fails on issues
       
       - name: Upload SARIF to Code Scanning
-        if: always()   # still upload even if ESLint failed
+        #if: always()   # still upload even if ESLint failed
         uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: eslint-results.sarif
           wait-for-processing: true
       
       - name: Save SARIF as artifact
-        if: always()
+        #if: always()
         uses: actions/upload-artifact@v4
         with:
           name: eslint-results
