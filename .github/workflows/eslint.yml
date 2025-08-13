@@ -35,19 +35,16 @@ jobs:
           node-version: '18.18'   # or 20.x
           cache: 'npm'
       - run: npm ci               # respects your lockfile; no forced downgrades
-#      - name: Install ESLint
-#        run: |
-#          npm install eslint@8.10.0
-#          npm install @microsoft/eslint-formatter-sarif@3.1.0
-
+      - name: Instal SARIF formatter
+      - run: npm i -D @microsoft/eslint-formatter-sarif
       - name: Run ESLint
         env:
           SARIF_ESLINT_IGNORE_SUPPRESSED: "true"
         run: npx eslint .
           --config eslint.config.js
           --ext .js,.jsx,.ts,.tsx
+          --format @microsoft/eslint-formatter-sarif
           --output-file eslint-results.sarif
-#          --format @microsoft/eslint-formatter-sarif
         continue-on-error: true
 
       - name: Upload analysis results to GitHub
