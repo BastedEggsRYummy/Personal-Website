@@ -1,9 +1,16 @@
-.App {  
-  background-color: blue;
+/*.App {  
+  /*background-color: blue;
 
   display: flex;
 
   flex-direction: column;
+}
+
+#home-container {
+  max-width: 100vw;
+  overflow-x: hidden;
+
+  background-color: yellow;
 }
 
 

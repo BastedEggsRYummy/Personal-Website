@@ -8,7 +8,7 @@ function App() {
   return (
     <div class="App">
       <Header />
-      <Home />
+      <Home id="home-container"/>
     </div>
   );
 }
