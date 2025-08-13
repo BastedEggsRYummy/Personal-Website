@@ -36,7 +36,7 @@ jobs:
           cache: 'npm'
       - run: npm ci               # respects your lockfile; no forced downgrades
       - name: Instal SARIF formatter
-      - run: npm i -D @microsoft/eslint-formatter-sarif
+        run: npm i -D @microsoft/eslint-formatter-sarif
       - name: Run ESLint
         env:
           SARIF_ESLINT_IGNORE_SUPPRESSED: "true"
