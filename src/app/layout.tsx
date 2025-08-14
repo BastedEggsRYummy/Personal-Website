@@ -4,6 +4,7 @@ import { type Metadata } from "next";
 import { Geist } from "next/font/google";
 
 import { TRPCReactProvider } from "~/trpc/react";
+import { MantineProvider } from "@mantine/core";
 
 export const metadata: Metadata = {
   title: "Create T3 App",
@@ -21,7 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={geist.className}>
-        <TRPCReactProvider>{children}</TRPCReactProvider>
+        <TRPCReactProvider>
+          <MantineProvider>
+            {children}
+          </MantineProvider>
+        </TRPCReactProvider>
       </body>
     </html>
   );
