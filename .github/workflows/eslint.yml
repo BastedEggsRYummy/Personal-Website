@@ -71,7 +71,7 @@ jobs:
           retention-days: 7
 
   prettier:
-    name: Run Prettier
+    name: Run prettier
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -88,5 +88,10 @@ jobs:
         
       - run: npm ci
               
-      - name: Run Prettier
-        run: npx Prettier src/
+      - name: Run prettier
+        run: |
+          $numWarns = npx prettier src/ -c | grep -c "Code style issues found" | wc -l
+          if [numWarns -gt 0]; then
+            exit 1
+          fi
+          
