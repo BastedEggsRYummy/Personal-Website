@@ -90,8 +90,8 @@ jobs:
               
       - name: Run prettier
         run: |
-          $numWarns = npx prettier src/ -c | grep -c "Code style issues found" | wc -l
-          if [numWarns -gt 0]; then
+          numWarns=$(npx prettier src/ -c | grep -c "Code style issues found" | wc -l)
+          if [ $numWarns -gt 0 ]; then
             exit 1
           fi
           
