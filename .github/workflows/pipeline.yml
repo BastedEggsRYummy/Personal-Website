@@ -1,23 +1,10 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-# ESLint is a tool for identifying and reporting on patterns
-# found in ECMAScript/JavaScript code.
-# More details at https://github.com/eslint/eslint
-# and https://eslint.org
-
 name: Build T3 Site
 
 on:
   push:
     branches: [ "main" ]
   pull_request:
-    # The branches below must be a subset of the branches above
     branches: [ "main" ]
-# I don't care about linting on a schedule
-#  schedule:
-#    - cron: '33 1 * * 4'
 
 jobs:
   #ESLINT: For linting
@@ -27,7 +14,6 @@ jobs:
     permissions:
       contents: read
       security-events: write
-      #actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -70,13 +56,13 @@ jobs:
           path: eslint-results.sarif
           retention-days: 7
 
+  #Runs prettier and errors when there's anything wrong
   prettier:
     name: Run prettier
     runs-on: ubuntu-latest
     permissions:
       contents: read
       security-events: write
-      #actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -95,6 +81,7 @@ jobs:
             exit 1
           fi
   
+  #Builds project
   build:
     name: Run build
     runs-on: ubuntu-latest
@@ -102,7 +89,6 @@ jobs:
     permissions:
       contents: read
       security-events: write
-      #actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -116,4 +102,3 @@ jobs:
               
       - name: Run build
         run: npm run build
-          
