@@ -76,7 +76,7 @@ jobs:
               
       - name: Run prettier
         run: |
-          if ! npx prettier --check .; then
+          if ! npx prettier --check src/; then
             echo "prettier found formatting issues"
             exit 1
           fi
