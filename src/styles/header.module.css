@@ -1,0 +1,7 @@
+@import './variables.module.css';
+
+.header {
+  justify-content: space-between;
+  width: "100vw";
+  background: var(--off-white);
+}

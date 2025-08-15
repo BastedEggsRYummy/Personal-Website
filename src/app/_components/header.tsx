@@ -1,3 +1,4 @@
+import styles from "src/styles/header.module.css";
 import { Anchor, AspectRatio, Group, Image, Text } from "@mantine/core";
 type pageOptions = "Home" | "Experience" | "Reasearch" | "Projects" | "Groups";
 
@@ -10,11 +11,7 @@ export default function Header({ currentPage }: HeaderTypes) {
     <Group
       justify="space-between"
       w={"100vw"}
-      align="center"
-      wrap="nowrap"
-      p={0}
-      m={0}
-      bd={0}
+      className={styles.header}
     >
       <Group gap={"sm"} ml={"sm"}>
         <AspectRatio>

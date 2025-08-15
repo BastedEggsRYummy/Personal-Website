@@ -1,5 +1,6 @@
 "use client";
 import "@mantine/core/styles.css";
+import styles from "src/styles/home.module.css"
 import { AppShell, Group, Text } from "@mantine/core";
 import Header from "./_components/header";
 
@@ -11,9 +12,11 @@ export default function BasicAppShell() {
           <Header currentPage="Home" />
         </Group>
       </AppShell.Header>
-      <AppShell.Main>
+      <AppShell.Main className={styles.landingHomePage}>
         <Text>This is the main section, your app content here.</Text>
-        <Text> Layout used in most cases - Navbar and Header with fixed position                                                                      </Text>
+        <Text>
+          Layout used in most cases - Navbar and Header with fixed position
+        </Text>
       </AppShell.Main>
     </AppShell>
   );
