@@ -23,9 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={geist.className}>
         <TRPCReactProvider>
-          <MantineProvider>
-            {children}
-          </MantineProvider>
+          <MantineProvider>{children}</MantineProvider>
         </TRPCReactProvider>
       </body>
     </html>
