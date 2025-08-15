@@ -1,6 +1,6 @@
 "use client";
 import "@mantine/core/styles.css";
-import styles from "src/styles/home.module.css"
+import styles from "src/styles/home.module.css";
 import { AppShell, Group, Text } from "@mantine/core";
 import Header from "./_components/header";
 

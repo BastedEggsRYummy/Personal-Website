@@ -8,48 +8,61 @@ interface HeaderTypes {
 
 export default function Header({ currentPage }: HeaderTypes) {
   return (
-    <Group
-      justify="space-between"
-      w={"100vw"}
-      className={styles.header}
-    >
+    <Group justify="space-between" w={"100vw"} className={styles.header}>
       <Group gap={"sm"} ml={"sm"}>
         <AspectRatio>
           <Image
             src="images/bad_logo.png"
             alt="Logo for the personal website"
             radius="md"
-            h={55}
+            h={60}
             fit="fill"
           />
         </AspectRatio>
-        <Text>Jackson Baimel</Text>
+        <Text fw={700} size="xl">
+          Jackson Baimel
+        </Text>
       </Group>
       <Group gap={"sm"} mr={"sm"}>
-        <Anchor
-          href={"www.google.com"}
-          style={{ color: currentPage === "Projects" ? "black" : "green" }}
-        >
-          Home
+        <Anchor href={"/"} style={{ color: "black" }}>
+          <Text fw={500} style={{ color: "black" }} size="lg">
+            Home
+          </Text>
         </Anchor>
-        <Anchor href={"www.google.com"}>Experience</Anchor>
-        <Anchor href={"www.google.com"} style={{ color: "black" }}>
-          Reasearch
+        <Anchor href={"/experience"} style={{ color: "black" }}>
+          <Text fw={500} size="lg">
+            Experience
+          </Text>
         </Anchor>
-        <Anchor href={"www.google.com"} style={{ color: "black" }}>
-          Projects
+        <Anchor href={"/research"} style={{ color: "black" }}>
+          <Text fw={500} size="lg">
+            Research
+          </Text>
         </Anchor>
-        <Anchor href={"www.google.com"} style={{ color: "black" }}>
-          Groups
+        <Anchor href={"/projects"} style={{ color: "black" }}>
+          <Text fw={500} size="lg">
+            Projects
+          </Text>
         </Anchor>
-        <Anchor href={"www.google.com"} style={{ color: "black" }}>
-          Dark Mode
+        <Anchor href={"/groups"} style={{ color: "black" }}>
+          <Text fw={500} size="lg">
+            Groups
+          </Text>
         </Anchor>
-        <Anchor href={"www.google.com"} style={{ color: "black" }}>
-          View In Terminal
+        <Anchor href={"/dark-mode-not-a-page"} style={{ color: "black" }}>
+          <Text fw={500} size="lg">
+            Dark Mode
+          </Text>
         </Anchor>
-        <Anchor href={"www.google.com"} style={{ color: "black" }}>
-          Settings
+        <Anchor href={"/terminal-view"} style={{ color: "black" }}>
+          <Text fw={500} size="lg">
+            View In Terminal
+          </Text>
+        </Anchor>
+        <Anchor href={"/settings"} style={{ color: "black" }}>
+          <Text fw={500} size="lg">
+            Settings
+          </Text>
         </Anchor>
       </Group>
     </Group>

@@ -1,4 +1,4 @@
-@import './variables.module.css';
+@import "./variables.module.css";
 
 .landingHomePage {
   min-height: 100vh;
@@ -6,5 +6,5 @@
     180deg,
     var(--off-white) 0%,
     var(--sky-blue) 100%
-  )
+  );
 }
