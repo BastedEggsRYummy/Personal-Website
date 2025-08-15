@@ -13,9 +13,7 @@ export default function BasicAppShell() {
       </AppShell.Header>
       <AppShell.Main>
         <Text>This is the main section, your app content here.</Text>
-        <Text>
-          Layout used in most cases - Navbar and Header with fixed position
-        </Text>
+        <Text> Layout used in most cases - Navbar and Header with fixed position                                                                      </Text>
       </AppShell.Main>
     </AppShell>
   );
